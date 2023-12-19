@@ -1,0 +1,54 @@
+.mobileIcon {
+  font-size: 1.5rem;
+  display: none;
+  gap: 30px;
+  overflow-x: auto;
+  /* padding: 1rem; */
+  padding-inline: 40%;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: center;
+  align-items: center;
+  height: 15%;
+  scrollbar-width: none;
+  background-color: rgba(255, 0, 0, 0);
+
+}
+
+.mobileIconBlue{
+  background-color: #79bde0;
+}
+.mobileIconGrey{
+  background-color: #595959;
+}
+.mobileIconPink{
+  background-color: #d88894;
+}
+.mobileIconOrange{
+  background-color: #d8c059;
+}
+.mobileIconGreen{
+  background-color: #68bd89;
+}
+
+.mobileIconNeutral{
+  background-color: #59595900;
+}
+
+
+
+
+/* .mobileIcon .p:first-child{
+
+    padding-left:40%;
+}
+
+
+.mobileIcon .p:last-child{
+    padding-left:40%;
+} */
+
+@media screen and (max-width: 900px) {
+  .mobileIcon {
+    display: flex;
+  }
+}
