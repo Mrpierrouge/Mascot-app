@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: "Mulish", sans-serif;
 }
+body{
+  overflow: hidden;
+}
 ::-webkit-scrollbar {
   display: none;
 }
@@ -50,6 +53,7 @@ label input {
   position: absolute;
   top: 10px;
   left: 10px;
+  border-radius: 10px;
 }
 
 .icons {
@@ -326,4 +330,34 @@ label input {
     display: flex;
     justify-content: space-around;
   }
+}
+
+.choice{
+  position: absolute;
+  width: 80%;
+}
+
+.mascotte-body{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#body-mascotte{
+  z-index: 1;
+
+}
+#eyes-mascotte{
+  z-index: 2;
+}
+#hat-mascotte{
+  z-index: 3;
+}
+#accessories-mascotte{
+  z-index: 4;
+}
+#background-mascotte{
+  z-index: -1;
+  width: 100%;
 }

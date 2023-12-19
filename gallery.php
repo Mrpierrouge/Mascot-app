@@ -36,12 +36,12 @@
             <div id="qrcode"></div>
             <div class="mascotte" id="screenMascotte">
                 <div class="mascotte-body">
-                    <img id="body" class="choice" src="images/Formes/Formes1.png" alt="body">
-                    <img id="eyes" class="choice" src="images/Emotions/Emotions1.png" alt="eyes">
-                    <img id="hat" class="choice" src="images/Accesoires/Accessoires1.png" alt="hat">
-                    <img id="accessories" class="choice" src="" alt="">
+                    <img id="body" class="choice" src="" >
+                    <img id="eyes" class="choice" src="" >
+                    <img id="hat" class="choice" src="">
+                    <img id="accessories" class="choice" src="">
                 </div>
-                <img id="background" class="choice" src="img/Arc_de_Triomphe.png" alt="background">
+                <img id="background" class="choice" src="">
             </div>
         </div>
 
@@ -51,11 +51,11 @@
                 <div class="grille">         
                 <?php foreach($mascottes as $mascotte){  ?>
                     <div class="mascotte-gallery" id="<?= $mascotte['id'] ?>">
-                        <img id="body" src="<?= $mascotte['lien_corps'] ?>" alt="body">
-                        <img id="eyes" src="<?= $mascotte['lien_visage'] ?>" alt="eyes">
-                        <img id="hat" src="<?= $mascotte['lien_accessoire'] ?>" alt="hat">
-                        <img id="background" src="<?= $mascotte['lien_background'] ?>" alt="background">
-                        <img class="accessories" src="<?= $mascotte['lien_sport'] ?>" alt="">
+                        <img id="body" src="images/Formes/Gallery/<?= $mascotte['lien_corps'] ?>" alt="body">
+                        <img id="eyes" src="images/Emotions/Gallery/<?= $mascotte['lien_visage'] ?>" alt="eyes">
+                        <img id="hat" src="images/Hat/Gallery/<?= $mascotte['lien_accessoire'] ?>" alt="hat">
+                        <img id="background" src="images/Background/<?= $mascotte['lien_background'] ?>" alt="background">
+                        <img id="accessories" src="images/Accessoires/Gallery/<?= $mascotte['lien_sport'] ?>" alt="">
                     </div>
                 <?php } ?>
                 </div>

@@ -35,43 +35,49 @@
     <form action="insert-mascotte.php" method="get">
     <div class="content">
       <div class="left">
-        <img src="images/logo.png" alt="" class="logoJO" />
-        <div class="mascotte">
-          <img src="images/test.png" alt="" class="test" />
+        <img src="images/logo.png" alt="" class="logoJO"/>
+
+        <div class="mascotte-body">
+          <img id="body-mascotte" class="choice" src="" alt="">
+          <img id="eyes-mascotte" class="choice" src="" alt="">
+          <img id="hat-mascotte" class="choice" src="" alt="">
+          <img id="accessories-mascotte" class="choice" src="" alt="">
+          <img id="background-mascotte" class="choice" src="" alt="">
         </div>
       </div>
+
       <div class="right">
         <div class="icons">
           <div class="round " id="colors">
             <img
-              src="images/icons/colors.png"
+              src="images/icons/forme.png"
               alt=""
               class="icon color opacity"
             />
           </div>
           <div class="round " id="eyes">
-            <img src="images/icons/eyes.png" alt="" class="icon eye opacity" />
+            <img src="images/icons/expression.png" alt="" class="icon eye opacity" />
           </div>
           <div class="round " id="hats">
             <img src="images/icons/hat.png" alt="" class="icon hat opacity" />
           </div>
           <div class="round " id="sports">
             <img
-              src="images/icons/sports.png"
+              src="images/icons/accessoire.png"
               alt=""
               class="icon sport opacity"
             />
           </div>
           <div class="round " id="pictures">
             <img
-              src="images/icons/picture.png"
+              src="images/icons/background.png"
               alt=""
               class="icon picture opacity"
             />
           </div>
           <div class="round" id="share">
             <img
-              src="images/icons/share.png"
+              src="images/icons/end.png"
               alt=""
               class="icon share opacity"
             />
@@ -92,7 +98,7 @@
           <div class="colors">
             <div class="divRounds">
               <div class="roundColors rouge"></div>
-              <div class="roundColors orange "></div>
+              <div class="roundColors orange"></div>
               <div class="roundColors vert "></div>
               <div class="roundColors bleu "></div>
               <div class="roundColors noir "></div>
@@ -101,7 +107,7 @@
             <?php foreach ($AllCorps as $corps): ?>
             <div class="box">
               <label class="labelexpanded">
-                  <div><img src="img/Formes/rouge/<?= $corps['lien'] ?>" alt=""></div>
+                  <div><img src="images/Formes/<?= $corps['lien'] ?>" alt="" class="forme-js"></div>
                   <input class="input-btn" type="radio" value="<?= $corps['lien'] ?>" name="corps">
               </label>
             </div>
@@ -109,14 +115,21 @@
           </div>
 
           <div class="eyes hidden">
-            <div class="box"></div>
+          <?php foreach ($AllVisage as $visage): ?>
+              <div class="box">
+                <label class="labelexpanded">
+                    <img src="images/Emotions/<?= $visage['lien'] ?>" alt="" class="emotions-js">
+                    <input class="input-btn" type="radio" value="<?= $visage['lien'] ?>" name="hat">
+                </label>
+              </div>
+          <?php endforeach ?>
           </div>
 
           <div class="hats hidden">
           <?php foreach ($AllHat as $hat): ?>
               <div class="box">
                 <label class="labelexpanded">
-                    <img src="img/hat/<?= $hat['lien'] ?>" alt="">
+                    <img src="images/Hat/<?= $hat['lien'] ?>" alt="" class="accessoire-js">
                     <input class="input-btn" type="radio" value="<?= $hat['lien'] ?>" name="hat">
                 </label>
               </div>
@@ -127,7 +140,7 @@
             <?php foreach ($AllSport as $sport): ?>
               <div class="box">
                 <label class="labelexpanded">
-                    <img src="img/sport/<?= $sport['lien'] ?>" alt="">
+                    <img src="images/Accessoires/<?= $sport['lien'] ?>" alt="" class="sport-js">
                     <input class="input-btn" type="radio" value="<?= $sport['lien'] ?>" name="sport">
                 </label>
               </div>
@@ -138,7 +151,7 @@
           <?php foreach ($AllBackground as $background): ?>
               <div class="box">
                 <label class="labelexpanded">
-                    <img src="img/background/<?= $background['lien'] ?>" alt="">
+                    <img src="images/Background/<?= $background['lien'] ?>" alt="" class="background-js">
                     <input class="input-btn" type="radio" value="<?= $background['lien'] ?>" name="background">
                 </label>
               </div>
@@ -156,5 +169,6 @@
   </form>
     <script src="js/mobile.js"></script>
     <script src="js/js.js"></script>
+    <script src="js/mascotte.js"></script>
   </body>
 </html>
