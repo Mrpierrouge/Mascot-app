@@ -51,6 +51,8 @@ mascotteGallery.forEach((mascotte) => {
 
     bigMascotteBody.src = body.src;
     bigMascotteEyes.src = eyes.src;
+    bigMascotteHat.src = hat.src;
+    bigMascotteAccessories.src = accessories.src;
     bigMascotteBackground.src = background.src;
     bigMascotteBtn.setAttribute("data-qr", id);
     
