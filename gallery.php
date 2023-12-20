@@ -25,15 +25,15 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
         <div class="mascotte-container">
             <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
             <button id="captureButton">Télécharger</button>
-            <button id="btnQRcode" data-qr="">QRCODE</button>
+            <button id="btnQRcode" data-qr="<?=$mascottes[0]['id'] ?>">QRCODE</button>
             <div class="mascotte" id="screenMascotte">
                 <div class="mascotte-body">
-                    <img id="body" class="choice" src="">
-                    <img id="eyes" class="choice" src="">
-                    <img id="hat" class="choice" src="">
-                    <img id="accessories" class="choice" src="">
+                    <img id="body" class="choice" src="images/Formes/Gallery/<?=$mascottes[0]['lien_corps'] ?>">
+                    <img id="eyes" class="choice" src="images/Emotions/Gallery/<?= $mascottes[0]['lien_visage'] ?>">
+                    <img id="hat" class="choice" src="images/Hat/Gallery/<?= $mascottes[0]['lien_accessoire'] ?>">
+                    <img id="accessories" class="choice" src="images/Accessoires/Gallery/<?= $mascottes[0]['lien_sport'] ?>">
                 </div>
-                <img id="background" class="choice" src="">
+                <img id="background" class="choice" src="images/Background/<?= $mascottes[0]['lien_background'] ?>">
             </div>
         </div>
 
@@ -61,15 +61,18 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
                     <script>
-                        document.getElementById('btnQRcode').addEventListener('click', function() {
-                            const id = this.getAttribute('data-qr');
-                            const popUp = document.querySelector('.mascotte' + id);
-                            popUp.style.display = popUp.style.display === 'none' ? 'flex' : 'none';
+                        const bidule<?=$mascotte['id']?> = document.querySelector('.mascotte<?=$mascotte['id']?>');
+                        console.log(bidule<?=$mascotte['id']?>);
+                        document.getElementById('btnQRcode').addEventListener('click', () => {
+                            document.querySelector('.popUpQrcode ').style.display = 'none' ? 'flex' : 'none';
+                            document.querySelector('.mascotte<?=$mascotte['id']?>').style.display = 'none' ? 'flex' : 'none';
+
                         });
 
-                        
-                        
-
+                        document.getElementById('closeQrcode').addEventListener('click', () => {
+                            document.querySelector('.popUpQrcode').style.display = 'none';
+                            document.querySelector('.mascotte<?=$mascotte['id'] ?>').style.display = 'none';
+                        });
                     </script>
                 <?php } ?>
             </div>
