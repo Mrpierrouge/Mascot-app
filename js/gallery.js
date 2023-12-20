@@ -50,11 +50,10 @@ mascotteGallery.forEach((mascotte) => {
     const background = mascotte.querySelector("#background");
 
     bigMascotteBody.src = body.src;
-    bigMascotteHat.src = hat.src;
     bigMascotteEyes.src = eyes.src;
-    bigMascotteAccessories.src = accessories.src;
     bigMascotteBackground.src = background.src;
     bigMascotteBtn.setAttribute("data-qr", id);
+    
   });
 });
 
