@@ -53,6 +53,27 @@ h1{
         font-size: 18px;
     }
 }
+@media  screen and (max-height: 700px)  {
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+@media screen and (max-height: 540px) {
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .blur{
+        padding: 8px;
+        min-width: 380px;
+    }
+}
+
 @media screen and (max-width: 824px) {
     h1{
         font-size: 30px;
