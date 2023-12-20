@@ -33,12 +33,12 @@ $id = $_GET['id'];
             <button id="captureButton">Télécharger</button>
             <div class="mascotte" id="screenMascotte">
                 <div class="mascotte-body">
-                    <img id="body" class="choice" src="images/Formes/<?=$mascotte[0]["lien_corps"]?>" >
-                    <img id="eyes" class="choice" src="" >
-                    <img id="hat" class="choice" src="">
-                    <img id="accessories" class="choice" src="">
+                    <img id="body" class="choice" src="images/Formes/Gallery/<?=$mascotte[0]["lien_corps"]?>" >
+                    <img id="eyes" class="choice" src="images/Emotions/Gallery/<?=$mascotte[0]["lien_visage"]?>" >
+                    <img id="hat" class="choice" src="images/Hat/Gallery/<?=$mascotte[0]["lien_accessoire"]?>">
+                    <img id="accessories" class="choice" src="images/Accessoires/Gallery/<?=$mascotte[0]["lien_sport"]?>">
                 </div>
-                <img id="background" class="choice" src="">
+                <img id="background" class="choice" src="images/Background/Gallery/<?=$mascotte[0]["lien_sport"]?>">
             </div>
         </div>
 
