@@ -267,19 +267,31 @@ label input {
     align-items: center;
     justify-content: space-evenly;
   }
-  .shares p {
-    font-size: 2rem;
+  .shares h2 {
+    font-size: 1.8rem;
     font-weight: 600;
     color: #131313;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    text-align: center;
   }
-
+  .shares p {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #131313;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    text-align: center;
+  }
+  
   .shares button {
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 50px;
     background-color: #131313;
+    border: none;
     color: white;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
   }
   .box {
     width: 100%;
