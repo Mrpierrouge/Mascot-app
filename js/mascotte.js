@@ -107,3 +107,55 @@ function removeBoxBorder(boxSelected) {
         box.classList.remove('box-selected');
     })
 }
+
+// Change color of the mascot
+const colorsBody = document.querySelectorAll('.colors .box');
+const redBody = document.querySelectorAll('#box-red');
+const yellowBody = document.querySelectorAll('#box-yellow');
+const blueBody = document.querySelectorAll('#box-blue');
+const greenBody = document.querySelectorAll('#box-green');
+const blackBody = document.querySelectorAll('#box-black');
+
+const colorsButton = document.querySelectorAll('.roundColors');
+console.log(greenBody);
+
+colorsButton.forEach(color => {
+    color.addEventListener('click', () => {
+        colorsBody.forEach(color => {
+            color.classList.add('hidden');
+            console.log(color)
+        })
+        if (color.id === "red") {
+            redBody.forEach(color => {
+                color.classList.remove('hidden');
+            })
+        } else if (color.id === "blue") {
+            blueBody.forEach(color => {
+                color.classList.remove('hidden');
+            })
+        } else if (color.id === "green") {
+            greenBody.forEach(color => {
+                color.classList.remove('hidden');
+            })
+        } else if (color.id === "yellow") {
+            yellowBody.forEach(color => {
+                color.classList.remove('hidden');
+            })
+        } else if (color.id === "black") {
+            blackBody.classList.remove('hidden');
+        }
+    })
+});
+
+
+// scrolls.forEach((scroll) => {
+//     if (scroll === targetScroll) {
+//       // Rendre l'élément de défilement visible et ajouter la classe de bordure
+//       scroll.classList.remove("hidden");
+//       scroll.classList.add(classBorder);
+//     } else {
+//       // Cacher l'élément de défilement et supprimer la classe de bordure
+//       scroll.classList.add("hidden");
+//       scroll.classList.remove(classBorder);
+//     }
+//   });
