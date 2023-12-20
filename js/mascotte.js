@@ -32,7 +32,6 @@ function formateSrc(src) {
 formes.forEach(forme => {
     forme.addEventListener('click', () => {
         bigMascotteBody.src = formateSrc(forme.src) + '.png';
-
     })
 });
 
