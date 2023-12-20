@@ -123,7 +123,6 @@ colorsButton.forEach(color => {
     color.addEventListener('click', () => {
         colorsBody.forEach(color => {
             color.classList.add('hidden');
-            console.log(color)
         })
         if (color.id === "red") {
             redBody.forEach(color => {
