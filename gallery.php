@@ -23,6 +23,7 @@ require("connec.php");
         <div class="mascotte-container">
             <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
             <button id="captureButton">Télécharger</button>
+            <button id="btnQRcode">tst</button>
             <div id="qrcode"></div>
             <div class="mascotte" id="screenMascotte">
                 <div class="mascotte-body">
@@ -46,6 +47,16 @@ require("connec.php");
                         <img id="hat" src="images/Hat/Gallery/<?= $mascotte['lien_accessoire'] ?>" >
                         <img id="background" src="images/Background/<?= $mascotte['lien_background'] ?>" >
                         <img id="accessories" src="images/Accessoires/Gallery/<?= $mascotte['lien_sport'] ?>" >
+                    </div>
+
+
+                    <div class="popUpQrcode">
+                        <div class="contentQRcode">
+                            <p>Voici votre qrcode</p>
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/BAP_2023/Mascotte/gallery.php?<?= $mascotte['id']?>/&size=150x150"
+                                alt="" title="" />
+                            <button id="closeQrcode">Fermer</button>
+                        </div>
                     </div>
                 <?php } ?>
                 </div>
