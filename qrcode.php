@@ -25,14 +25,12 @@ $id = $_GET['id'];
             <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
             <button id="captureButton">Télécharger</button>
             <div class="mascotte" id="screenMascotte">
-                <div class="mascotte-body">
-                    <img id="body" class="choice" src="images/Formes/Gallery/<?=$mascotte[0]["lien_corps"]?>" >
-                    <img id="eyes" class="choice" src="images/Emotions/Gallery/<?=$mascotte[0]["lien_visage"]?>" >
-                    <img id="hat" class="choice" src="images/Hat/Gallery/<?=$mascotte[0]["lien_accessoire"]?>">
-                    <img id="accessories" class="choice" src="images/Accessoires/Gallery/<?=$mascotte[0]["lien_sport"]?>">
-                    <img id="background" class="choice" src="images/Background/<?=$mascotte[0]["lien_background"]?>">
-                </div>
-                
+                <img id="body" class="choice" src="images/Formes/Gallery/<?=$mascotte[0]["lien_corps"]?>" >
+                <img id="eyes" class="choice" src="images/Emotions/Gallery/<?=$mascotte[0]["lien_visage"]?>" >
+                <img id="hat" class="choice" src="images/Hat/Gallery/<?=$mascotte[0]["lien_accessoire"]?>">
+                <img id="accessories" class="choice" src="images/Accessoires/Gallery/<?=$mascotte[0]["lien_sport"]?>">
+                <img id="background" class="choice" src="images/Background/<?=$mascotte[0]["lien_background"]?>">
+            
             </div>
         </div>
 
