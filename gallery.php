@@ -67,7 +67,7 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                             popUp.style.display = 'flex';
                         });
 
-                        document.getElementById('closeQrcode').addEventListener('click', () => {
+                        document.querySelector('.closeQrcode').addEventListener('click', () => {
                             document.querySelector('.popUpQrcode').style.display = 'none';
                             document.querySelector('.mascotte<?=$mascotte['id'] ?>').style.display = 'none';
                         });
