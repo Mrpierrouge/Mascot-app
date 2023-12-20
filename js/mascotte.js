@@ -142,7 +142,9 @@ colorsButton.forEach(color => {
                 color.classList.remove('hidden');
             })
         } else if (color.id === "black") {
-            blackBody.classList.remove('hidden');
+            blackBody.forEach(color => {
+                color.classList.remove('hidden');
+            })
         }
     })
 });

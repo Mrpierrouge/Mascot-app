@@ -48,6 +48,7 @@ label input {
   width: 45%;
   height: 100%;
   display: flex;
+  justify-content: flex-end;
   flex-direction: row;
 }
 .logo{
@@ -63,7 +64,7 @@ label input {
 }
 
 .icons {
-  width: 25%;
+  width: 20%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -71,7 +72,7 @@ label input {
   justify-content: space-around;
 }
 .choices {
-  width: 75%;
+  width: 80%;
   height: 100%;
   background-color: #eef1f4;
 }
@@ -137,16 +138,26 @@ label input {
   align-items: center;
   justify-content: center;
 }
-.shares p {
+.shares h2 {
   font-size: 3rem;
   font-weight: 600;
   color: #131313;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  max-width: 400px;
+  text-align: center;
+}
+.shares p {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #131313;
+  margin-bottom: 1.5rem;
+  max-width: 300px;
   text-align: center;
 }
 
 .shares button {
-  font-size: 3rem;
+  font-size: 2rem;
   border-radius: 50px;
   background-color: #131313;
   border: none;
@@ -264,11 +275,11 @@ label input {
   }
 
   .shares button {
-    font-size: 2rem;
+    font-size: 1rem;
     border-radius: 50px;
     background-color: #131313;
     color: white;
-    padding: 1rem 7rem;
+    padding: 1rem 4rem;
   }
   .box {
     width: 100%;
@@ -302,21 +313,21 @@ label input {
 }
 
 .rouge {
-  background-color: #f70000;
+  background-color: #FF0000;
 }
 
 .orange {
-  background-color: #ff9500;
+  background-color: #FFC600;
 }
 
 .vert {
-  background-color: #4cd964;
+  background-color: #00A900;
 }
 .bleu {
-  background-color: #15beff;
+  background-color: #00CAFF;
 }
 .noir {
-  background-color: #323232;
+  background-color: #1f1f1f;
 }
 @media screen and (max-width: 900px) {
   .divRounds {

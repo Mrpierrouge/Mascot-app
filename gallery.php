@@ -25,7 +25,7 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
         <div class="mascotte-container">
             <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
             <button id="captureButton">Télécharger</button>
-            <button id="btnQRcode">QRCODE</button>
+            <button id="btnQRcode" data-qr="">QRCODE</button>
             <div class="mascotte" id="screenMascotte">
                 <div class="mascotte-body">
                     <img id="body" class="choice" src="">
@@ -51,20 +51,18 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
 
-                    <div class="popUpQrcode mascotte<?= $mascotte['id'] ?>">
+                    <div class="popUpQrcode mascotte<?= $mascotte['id']  ?>">
                         <div class="contentQRcode">
                             <p>Voici votre qrcode</p>
                             <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/BAP_2023/Mascotte/qrcode.php?id=<?= $mascotte['id'] ?>/&size=150x150"
                                 alt="" title="" />
-                            <button id="closeQrcode">Fermer</button>
+                            <button class="closeQrcode">Fermer</button>
                         </div>
                     </div>
 
                     <script>
                         const bidule<?=$mascotte['id']?> = document.querySelector('.mascotte<?=$mascotte['id']?>');
                         console.log(bidule<?=$mascotte['id']?>);
-
-                        
                         document.getElementById('btnQRcode').addEventListener('click', () => {
                             document.querySelector('.popUpQrcode ').style.display = 'none' ? 'flex' : 'none';
                             document.querySelector('.mascotte<?=$mascotte['id']?>').style.display = 'none' ? 'flex' : 'none';
@@ -75,7 +73,6 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                             document.querySelector('.popUpQrcode').style.display = 'none';
                             document.querySelector('.mascotte<?=$mascotte['id'] ?>').style.display = 'none';
                         });
-
                     </script>
                 <?php } ?>
             </div>
