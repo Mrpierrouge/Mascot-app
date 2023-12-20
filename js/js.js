@@ -137,10 +137,3 @@ share.addEventListener("click", function () {
 });
 
 // -----------------------------
-document.getElementById('btnQRcode').addEventListener('click', () => {
-  document.querySelector('.popUpQrcode').style.display = 'none' ? 'flex': 'none';
-});
-
-document.getElementById('closeQrcode').addEventListener('click', () => {
-  document.querySelector('.popUpQrcode').style.display = 'none';
-});
