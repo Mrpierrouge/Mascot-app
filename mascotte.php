@@ -167,7 +167,7 @@
 
           <div class="hats hidden">
           <?php foreach ($AllHat as $hat): ?>
-              <div class="box">
+              <div class="box" id="box-height">
                 <label class="labelexpanded">
                     <img src="images/Hat/<?= $hat['lien'] ?>"  class="accessoire-js">
                     <input class="input-btn" type="radio" value="<?= $hat['lien'] ?>" name="hat">
@@ -178,7 +178,7 @@
 
           <div class="sports hidden">
             <?php foreach ($AllSport as $sport): ?>
-              <div class="box">
+              <div class="box" id="box-height">
                 <label class="labelexpanded">
                     <img src="images/Accessoires/<?= $sport['lien'] ?>"  class="sport-js">
                     <input class="input-btn" type="radio" value="<?= $sport['lien'] ?>" name="sport">
