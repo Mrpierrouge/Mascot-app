@@ -92,8 +92,8 @@ label input {
 
 .colors {
   /* border-left : 2vw solid #d88894; */
-  background-color: #d88894;
-  background: linear-gradient(to right, #eef1f4 50%, #d88894 50%);
+  background-color: #EC7373;
+  background: linear-gradient(to right, #eef1f4 50%, #EC7373 50%);
   background-size: 200% 100%;
   background-position: bottom right;
   transition: all 0.7s ease-out;
@@ -304,9 +304,9 @@ label input {
 }
 .roundColors {
   width: 50px;
-  aspect-ratio: 1/1;
+  height: 50px;
   border-radius: 50%;
-  margin: 1rem 0;
+  margin: 0 0 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;

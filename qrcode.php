@@ -2,7 +2,6 @@
 
 require("connec.php");
 $id = $_GET['id'];
-        echo($id);
 
 
     $requete = $database->prepare("SELECT * FROM mascottes WHERE id = $id");
@@ -16,16 +15,10 @@ $id = $_GET['id'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRCODE</title>
-    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/qr-code.css">
     <script src="https://kit.fontawesome.com/d46d8a5065.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-
-
-
-
-
     <section class="container">
         <!-- Left side, full mascotte-->
         <div class="mascotte-container">
@@ -37,8 +30,9 @@ $id = $_GET['id'];
                     <img id="eyes" class="choice" src="images/Emotions/Gallery/<?=$mascotte[0]["lien_visage"]?>" >
                     <img id="hat" class="choice" src="images/Hat/Gallery/<?=$mascotte[0]["lien_accessoire"]?>">
                     <img id="accessories" class="choice" src="images/Accessoires/Gallery/<?=$mascotte[0]["lien_sport"]?>">
+                    <img id="background" class="choice" src="images/Background/<?=$mascotte[0]["lien_background"]?>">
                 </div>
-                <img id="background" class="choice" src="images/Background/Gallery/<?=$mascotte[0]["lien_sport"]?>">
+                
             </div>
         </div>
 

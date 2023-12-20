@@ -60,7 +60,7 @@
 
       <div class="right">
         <div class="icons">
-          <div class="round " id="colors" style="background-color:#D88894">
+          <div class="round " id="colors" style="background-color:#EC7373">
             <img
               src="images/icons/forme.png"
               class="icon color"

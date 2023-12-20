@@ -43,13 +43,21 @@ eyes.forEach(eye => {
 
 hats.forEach(hat => {
     hat.addEventListener('click', () => {
-        bigMascotteHat.src = formateSrc(hat.src) + '.png';
+        if (hat.id === "ban") {
+            bigMascotteHat.src = "images/transparant.png";
+        } else {
+            bigMascotteHat.src = formateSrc(hat.src) + '.png';
+        }
     })
 });
 
 accessories.forEach(accessory => {
     accessory.addEventListener('click', () => {
-        bigMascotteAccessories.src = formateSrc(accessory.src) + '.png';
+        if (accessory.id === "ban") {
+            bigMascotteHat.src = "images/transparant.png";
+        } else {
+            bigMascotteAccessories.src = formateSrc(accessory.src) + '.png';
+        }
     })
 });
 
