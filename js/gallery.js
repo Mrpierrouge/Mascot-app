@@ -27,33 +27,33 @@
     });
 
 
-    // Affichage de la mascotte en plein écran 
-    const background = document.getElementById('background');
-    const bigMascotte = document.querySelector('.mascotte-body');
-    const bigMascotteBody = bigMascotte.querySelector('#body');
-    const bigMascotteHat = bigMascotte.querySelector('#hat');
-    const bigMascotteEyes = bigMascotte.querySelector('#eyes');
-    const bigMascotteAccessories = bigMascotte.querySelector('#accessories');
-    const bigMascotteBackground = document.querySelector('#background');
-    console.log(bigMascotteBackground);
-    const mascotteGallery = document.querySelectorAll('.mascotte-gallery');
 
-    console.log(mascotteGallery);
-    mascotteGallery.forEach(mascotte => {
-        mascotte.addEventListener('click', () => {
-            const body = mascotte.querySelector('#body');
-            const hat = mascotte.querySelector('#hat');
-            const eyes = mascotte.querySelector('#eyes');
-            const accessories = mascotte.querySelector('#accessories');
-            const background = mascotte.querySelector('#background');
-            
-            bigMascotteBody.src = body.src;
-            bigMascotteHat.src = hat.src;
-            bigMascotteEyes.src = eyes.src;
-            bigMascotteBackground.src = background.src;
-            
-        })
-    });
+// Affichage de la mascotte en plein écran 
+const background = document.getElementById('background');
+const bigMascotte = document.querySelector('.mascotte-body');
+const bigMascotteBody = bigMascotte.querySelector('#body');
+const bigMascotteHat = bigMascotte.querySelector('#hat');
+const bigMascotteEyes = bigMascotte.querySelector('#eyes');
+const bigMascotteAccessories = bigMascotte.querySelector('#accessories');
+const bigMascotteBackground = document.querySelector('#background');
+console.log(bigMascotteBackground);
+const mascotteGallery = document.querySelectorAll('.mascotte-gallery');
 
-
-  
+console.log(mascotteGallery);
+mascotteGallery.forEach(mascotte => {
+    console.log(mascotte);
+    mascotte.addEventListener('click', () => {
+        const body = mascotte.querySelector('#body');
+        const hat = mascotte.querySelector('#hat');
+        const eyes = mascotte.querySelector('#eyes');
+        const accessories = mascotte.querySelector('#accessories');
+        const background = mascotte.querySelector('#background');
+        
+        bigMascotteBody.src = body.src;
+        bigMascotteHat.src = hat.src;
+        bigMascotteEyes.src = eyes.src;
+        bigMascotteAccessories.src = accessories.src;
+        bigMascotteBackground.src = background.src;
+        
+    })
+});
