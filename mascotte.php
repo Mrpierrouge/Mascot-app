@@ -54,7 +54,7 @@
           <img id="eyes-mascotte" class="choice" src="" >
           <img id="hat-mascotte" class="choice" src="" >
           <img id="accessories-mascotte" class="choice" src="" >
-          <img id="background-mascotte" class="choice" src="images/Background/bg.png" >
+          <img id="background-mascotte" class="choice" src="" >
         </div>
       </div>
 
@@ -63,7 +63,7 @@
           <div class="round " id="colors" style="background-color:#D88894">
             <img
               src="images/icons/forme.png"
-              class="icon color opacity"
+              class="icon color"
             />
           </div>
           <div class="round " id="eyes">
@@ -199,8 +199,9 @@
           </div>
 
           <div class="shares hidden">
-            <p>Merci d'avoir participer !</p>
-            <button type="submit" name="submit" class="submit-btn" value="Confirm">J'AI FINI</button>
+            <h2>Merci d'avoir participer !*</h2>
+            <p>*J’accepte que ma mascotte soit publié sur le site du musée</p>
+            <button type="submit" name="submit" class="submit-btn" value="Confirm">Voir la gallerie</button>
           </div>   
         </form>
         </div>
