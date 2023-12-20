@@ -44,6 +44,7 @@ eyes.forEach(eye => {
 hats.forEach(hat => {
     hat.addEventListener('click', () => {
         bigMascotteHat.src = formateSrc(hat.src) + '.png';
+            bigMascotteHat.src = formateSrc(hat.src) + '.png';
     })
 });
 
@@ -123,7 +124,6 @@ colorsButton.forEach(color => {
     color.addEventListener('click', () => {
         colorsBody.forEach(color => {
             color.classList.add('hidden');
-            console.log(color)
         })
         if (color.id === "red") {
             redBody.forEach(color => {
