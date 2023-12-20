@@ -143,6 +143,7 @@ label input {
   font-weight: 600;
   color: #131313;
   margin-bottom: 3rem;
+  max-width: 400px;
   text-align: center;
 }
 .shares p {
