@@ -61,15 +61,18 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
                     <script>
-                        document.getElementById('btnQRcode').addEventListener('click', function() {
-                            const id = this.getAttribute('data-qr');
-                            const popUp = document.querySelector('.mascotte' + id);
-                            popUp.style.display = popUp.style.display === 'none' ? 'flex' : 'none';
+                        const bidule<?=$mascotte['id']?> = document.querySelector('.mascotte<?=$mascotte['id']?>');
+                        console.log(bidule<?=$mascotte['id']?>);
+                        document.getElementById('btnQRcode').addEventListener('click', () => {
+                            document.querySelector('.popUpQrcode ').style.display = 'none' ? 'flex' : 'none';
+                            document.querySelector('.mascotte<?=$mascotte['id']?>').style.display = 'none' ? 'flex' : 'none';
+
                         });
 
-                        
-                        
-
+                        document.getElementById('closeQrcode').addEventListener('click', () => {
+                            document.querySelector('.popUpQrcode').style.display = 'none';
+                            document.querySelector('.mascotte<?=$mascotte['id'] ?>').style.display = 'none';
+                        });
                     </script>
                 <?php } ?>
             </div>
