@@ -64,7 +64,7 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                         document.getElementById('btnQRcode').addEventListener('click', function() {
                             const id = this.getAttribute('data-qr');
                             const popUp = document.querySelector('.mascotte' + id);
-                            popUp.style.display = popUp.style.display === 'none' ? 'flex' : 'none';
+                            popUp.style.display = 'flex';
                         });
 
                         document.getElementById('closeQrcode').addEventListener('click', () => {
