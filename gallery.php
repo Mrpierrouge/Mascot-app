@@ -31,7 +31,7 @@
     <section class="container">
         <!-- Left side, full mascotte-->
         <div class="mascotte-container">
-            <a href=""><i class="fa-solid fa-xmark"></i></a>
+            <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
             <button id="captureButton">Télécharger</button>
             <div id="qrcode"></div>
             <div class="mascotte" id="screenMascotte">
@@ -51,11 +51,11 @@
                 <div class="grille">         
                 <?php foreach($mascottes as $mascotte){  ?>
                     <div class="mascotte-gallery" id="<?= $mascotte['id'] ?>">
-                        <img id="body" src="images/Formes/Gallery/<?= $mascotte['lien_corps'] ?>" alt="body">
-                        <img id="eyes" src="images/Emotions/Gallery/<?= $mascotte['lien_visage'] ?>" alt="eyes">
-                        <img id="hat" src="images/Hat/Gallery/<?= $mascotte['lien_accessoire'] ?>" alt="hat">
-                        <img id="background" src="images/Background/<?= $mascotte['lien_background'] ?>" alt="background">
-                        <img id="accessories" src="images/Accessoires/Gallery/<?= $mascotte['lien_sport'] ?>" alt="">
+                        <img id="body" src="images/Formes/Gallery/<?= $mascotte['lien_corps'] ?>">
+                        <img id="eyes" src="images/Emotions/Gallery/<?= $mascotte['lien_visage'] ?>" >
+                        <img id="hat" src="images/Hat/Gallery/<?= $mascotte['lien_accessoire'] ?>" >
+                        <img id="background" src="images/Background/<?= $mascotte['lien_background'] ?>" >
+                        <img id="accessories" src="images/Accessoires/Gallery/<?= $mascotte['lien_sport'] ?>" >
                     </div>
                 <?php } ?>
                 </div>

@@ -32,6 +32,7 @@ function formateSrc(src) {
 formes.forEach(forme => {
     forme.addEventListener('click', () => {
         bigMascotteBody.src = formateSrc(forme.src) + '.png';
+
     })
 });
 
@@ -60,4 +61,50 @@ backgrounds.forEach(background => {
 }  );
 
 
-// Change the color of the mascotte
+// On click for the selected mascotte
+const boxMascotteFormes = document.querySelectorAll('.colors .box');
+const boxMascotteEyes = document.querySelectorAll('.eyes .box');
+const boxMascotteHats = document.querySelectorAll('.hats .box');
+const boxMascotteAccessories = document.querySelectorAll('.sports .box');
+const boxMascotteBackgrounds = document.querySelectorAll('.pictures .box');
+
+boxMascotteFormes.forEach(boxForme => {
+    boxForme.addEventListener('click', () => {
+        removeBoxBorder(boxMascotteFormes);
+        boxForme.classList.add('box-selected');
+    })
+});
+
+boxMascotteHats.forEach(boxHat => {
+    boxHat.addEventListener('click', () => {
+        removeBoxBorder(boxMascotteHats);
+        boxHat.classList.add('box-selected');
+    })
+});
+
+boxMascotteAccessories.forEach(boxAccessory => {
+    boxAccessory.addEventListener('click', () => {
+        removeBoxBorder(boxMascotteAccessories);
+        boxAccessory.classList.add('box-selected');
+    })
+});
+
+boxMascotteBackgrounds.forEach(boxBackground => {
+    boxBackground.addEventListener('click', () => {
+        removeBoxBorder(boxMascotteBackgrounds);
+        boxBackground.classList.add('box-selected');
+    })
+});
+
+boxMascotteEyes.forEach(boxEye => {
+    boxEye.addEventListener('click', () => {
+        removeBoxBorder(boxMascotteEyes);
+        boxEye.classList.add('box-selected');
+    })
+});
+
+function removeBoxBorder(boxSelected) {
+    boxSelected.forEach(box => {
+        box.classList.remove('box-selected');
+    })
+}
