@@ -1,21 +1,11 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "mascotte";
 
-    try{
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    }
-    catch(PDOException $e){
-        echo "Connection failed: " . $e->getMessage();
-    }
+require("connec.php");
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    $query = "select * from mascottes";
-    $mascottes = mysqli_query($conn, $query); 
 
+    $requete = $database->prepare("SELECT * FROM mascottes ORDER BY id DESC");
+    $requete->execute();
+    $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>

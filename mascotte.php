@@ -115,7 +115,7 @@
               <div class="box">
                 <label class="labelexpanded">
                     <img src="images/Emotions/<?= $visage['lien'] ?>"  class="emotions-js">
-                    <input class="input-btn" type="radio" value="<?= $visage['lien'] ?>" name="hat">
+                    <input class="input-btn" type="radio" value="<?= $visage['lien'] ?>" name="visage">
                 </label>
               </div>
           <?php endforeach ?>
