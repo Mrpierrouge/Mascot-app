@@ -113,7 +113,7 @@ function handleItemClick(target, targetID, targetScroll, color, classBorder) {
 
 // Ajouter des écouteurs d'événements pour chaque élément de couleur, œil, chapeau, sport, image et partage
 color.addEventListener("click", function () {
-  handleItemClick(color, colorsID, colorsScroll, "#79BDE0", "colors");
+  handleItemClick(color, colorsID, colorsScroll, "#D88894", "colors");
 });
 
 eye.addEventListener("click", function () {
@@ -121,7 +121,7 @@ eye.addEventListener("click", function () {
 });
 
 hat.addEventListener("click", function () {
-  handleItemClick(hat, hatsID, hatsScroll, "#D88894", "hats");
+  handleItemClick(hat, hatsID, hatsScroll, "#79BDE0", "hats");
 });
 
 sport.addEventListener("click", function () {
