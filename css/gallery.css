@@ -62,7 +62,8 @@ button {
 }
 #background {
     z-index: 0;
-   
+   height: 100vh;
+   width: 100%;
 }
 #body {
     z-index: 1;
