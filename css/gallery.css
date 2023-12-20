@@ -41,6 +41,10 @@ button {
     width: 100%;
     justify-content: center;
 }
+.mascotte-body {
+    display: flex;
+    justify-content: center;
+}
 .mascotte {
     width: 100%;
     position: relative;
