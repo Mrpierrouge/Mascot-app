@@ -1,9 +1,21 @@
 <?php
     require_once "connec.php";
 
-    $requete = $database->prepare("SELECT * FROM corps ");
+    $requete = $database->prepare("SELECT * FROM `corps` WHERE color='red';");
     $requete->execute();
-    $AllCorps = $requete->fetchAll(PDO::FETCH_ASSOC);
+    $AllCorpsRed = $requete->fetchAll(PDO::FETCH_ASSOC);
+    $requete = $database->prepare("SELECT * FROM `corps` WHERE color='blue';");
+    $requete->execute();
+    $AllCorpsBlue = $requete->fetchAll(PDO::FETCH_ASSOC);
+    $requete = $database->prepare("SELECT * FROM `corps` WHERE color='black';");
+    $requete->execute();
+    $AllCorpsBlack = $requete->fetchAll(PDO::FETCH_ASSOC);
+    $requete = $database->prepare("SELECT * FROM `corps` WHERE color='green';");
+    $requete->execute();
+    $AllCorpsGreen = $requete->fetchAll(PDO::FETCH_ASSOC);
+    $requete = $database->prepare("SELECT * FROM `corps` WHERE color='yellow';");
+    $requete->execute();
+    $AllCorpsYellow = $requete->fetchAll(PDO::FETCH_ASSOC);
 
     $requete = $database->prepare("SELECT * FROM visage ");
     $requete->execute();
@@ -93,15 +105,47 @@
 
           <div class="colors">
             <div class="divRounds">
-              <div class="roundColors rouge"></div>
-              <div class="roundColors orange"></div>
-              <div class="roundColors vert "></div>
-              <div class="roundColors bleu "></div>
-              <div class="roundColors noir "></div>
+              <div class="roundColors rouge" id="red"></div>
+              <div class="roundColors orange" id="yellow"></div>
+              <div class="roundColors vert" id="green"></div>
+              <div class="roundColors bleu" id="blue"></div>
+              <div class="roundColors noir" id="black"></div>
             </div>
       
-            <?php foreach ($AllCorps as $corps): ?>
-            <div class="box">
+            <?php foreach ($AllCorpsRed as $corps): ?>
+            <div class="box" id="box-red">
+              <label class="labelexpanded">
+                  <div><img src="images/Formes/<?= $corps['lien'] ?>"  class="forme-js"></div>
+                  <input class="input-btn" type="radio" value="<?= $corps['lien'] ?>" name="corps">
+              </label>
+            </div>
+            <?php endforeach ?>
+            <?php foreach ($AllCorpsYellow as $corps): ?>
+            <div class="box hidden" id="box-yellow">
+              <label class="labelexpanded">
+                  <div><img src="images/Formes/<?= $corps['lien'] ?>"  class="forme-js"></div>
+                  <input class="input-btn" type="radio" value="<?= $corps['lien'] ?>" name="corps">
+              </label>
+            </div>
+            <?php endforeach ?>
+            <?php foreach ($AllCorpsGreen as $corps): ?>
+            <div class="box hidden" id="box-green">
+              <label class="labelexpanded">
+                  <div><img src="images/Formes/<?= $corps['lien'] ?>"  class="forme-js"></div>
+                  <input class="input-btn" type="radio" value="<?= $corps['lien'] ?>" name="corps">
+              </label>
+            </div>
+            <?php endforeach ?>
+            <?php foreach ($AllCorpsBlue as $corps): ?>
+            <div class="box hidden" id="box-blue">
+              <label class="labelexpanded">
+                  <div><img src="images/Formes/<?= $corps['lien'] ?>"  class="forme-js"></div>
+                  <input class="input-btn" type="radio" value="<?= $corps['lien'] ?>" name="corps">
+              </label>
+            </div>
+            <?php endforeach ?>
+            <?php foreach ($AllCorpsBlack as $corps): ?>
+            <div class="box hidden" id="box-black">
               <label class="labelexpanded">
                   <div><img src="images/Formes/<?= $corps['lien'] ?>"  class="forme-js"></div>
                   <input class="input-btn" type="radio" value="<?= $corps['lien'] ?>" name="corps">
