@@ -149,9 +149,9 @@ class Particle {
 
   getImage() {
     if (this.color === "#FCB030") {
-        return document.getElementById("image2");
-    } else if (this.color === "#090909") {
         return document.getElementById("image3");
+    } else if (this.color === "#090909") {
+        return document.getElementById("image1");
     } else if (this.color === "#009D4B") {
         return document.getElementById("image2");
     } else if (this.color === "#E72845") {
@@ -249,3 +249,4 @@ function animate() {
 
 init();
 animate();
+

@@ -47,7 +47,9 @@
     <form action="insert-mascotte.php" method="get">
     <div class="content">
       <div class="left">
-        <img src="images/logo.png"  class="logo"/>
+        <a href="index.html">
+          <img src="images/logo.png"  class="logo"/>
+        </a>
 
         <div class="mascotte-body">
           <img id="body-mascotte" class="choice" src="images/Formes/Formes1.png" >
