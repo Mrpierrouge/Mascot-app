@@ -41,7 +41,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mascotte</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mascotte.css" />
   </head>
   <body>
     <form action="insert-mascotte.php" method="get">
@@ -68,7 +68,7 @@
               class="icon color"
             />
           </div>
-          <div class="round " id="eyes">
+          <div class="round eyeIcon" id="eyes">
             <img src="images/icons/expression.png"  class="icon eye opacity" />
           </div>
           <div class="round " id="hats">

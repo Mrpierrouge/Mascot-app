@@ -14,13 +14,8 @@ p{
     font-size: 20px;
 }
 a {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 100;
-    color: #667080;
     text-decoration: none;
-    font-size: 30px;
+    color: white;
 }
 button {
     z-index: 100;
@@ -125,7 +120,9 @@ button {
     justify-content: center;
     align-items: center;
 }
-
+.qrcodeIcon{
+    width: 25%;
+}
 .contentQRcode{
     position: relative;
     width: 300px;
@@ -156,6 +153,35 @@ button {
         z-index: 4;
     }
 }
+
+.accueilQrBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 100;
+    padding: 10px;
+    gap: 5px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    border: none;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    min-height: 30px;
+    height: auto;
+    border-radius: 20px;
+    
+}
+
+.accueil{
+    left: 20px;
+}
+
+.eyeIcon{
+    width: 85%;
+}
+
 
 
 @media screen and (max-width: 1000px) {
