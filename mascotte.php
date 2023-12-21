@@ -47,7 +47,9 @@
     <form action="insert-mascotte.php" method="get">
     <div class="content">
       <div class="left">
-        <img src="images/logo.png"  class="logo"/>
+        <a href="index.html">
+          <img src="images/logo.png"  class="logo"/>
+        </a>
 
         <div class="mascotte-body">
           <img id="body-mascotte" class="choice" src="images/Formes/Formes1.png" >
@@ -66,7 +68,7 @@
               class="icon color"
             />
           </div>
-          <div class="round " id="eyes">
+          <div class="round eyeIcon" id="eyes">
             <img src="images/icons/expression.png"  class="icon eye opacity" />
           </div>
           <div class="round " id="hats">

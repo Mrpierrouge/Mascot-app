@@ -157,7 +157,7 @@ label input {
   text-align: center;
 }
 .shares p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 600;
   color: #131313;
@@ -167,12 +167,12 @@ label input {
 }
 
 .shares button {
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-radius: 50px;
   background-color: #131313;
   border: none;
   color: white;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem;
 }
 #box-height {
   height: 100%;
@@ -289,22 +289,22 @@ label input {
     text-align: center;
   }
   .shares p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-style: italic;
     font-weight: 400;
     color: #131313;
     margin-bottom: 1rem;
-    max-width: 600px;
+    max-width: 340px;
     text-align: center;
   }
   
   .shares button {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-radius: 50px;
     background-color: #131313;
     border: none;
     color: white;
-    padding: 1rem 2rem;
+    padding: 1rem 1.8rem;
   }
   .box {
     width: 100%;
