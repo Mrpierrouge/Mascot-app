@@ -8,6 +8,7 @@
   font-family: "Mulish", sans-serif;
 }
 body{
+  background-color: #ffffff;
   overflow: hidden;
 }
 ::-webkit-scrollbar {
@@ -405,5 +406,6 @@ label input {
 }
 
 .box-selected{
-  border: 4px solid #131313;
+    outline: 4px solid #ffffff;
+    outline-offset: 4px;
 }
