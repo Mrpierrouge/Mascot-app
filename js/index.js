@@ -249,6 +249,3 @@ function animate() {
 
 init();
 animate();
-
-const logo = document.querySelector(".logo");
-logo.style.left = canvas.width / 2 - logo.clientWidth / 2 + "px";

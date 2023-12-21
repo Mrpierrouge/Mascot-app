@@ -8,6 +8,7 @@
   font-family: "Mulish", sans-serif;
 }
 body{
+  background-color: #FFFDF4;
   overflow: hidden;
 }
 ::-webkit-scrollbar {
@@ -20,6 +21,15 @@ label input {
 .box img{
   width: 100%;
   height: 100%;
+  padding: 12px;
+}
+.bg img,
+.accessoire img,
+.chapeau img{
+  padding: 0;
+}
+
+.visages img{
   padding: 12px;
 }
 

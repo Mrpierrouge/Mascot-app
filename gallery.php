@@ -19,8 +19,9 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://kit.fontawesome.com/d46d8a5065.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onkeydown="activite_detectee = true;" onmousemove="activite_detectee = true;" onscroll="activite_detectee = true;">
     <section class="container">
+
         <!-- Left side, full mascotte-->
         <div class="mascotte-container">
             <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
@@ -38,9 +39,9 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
         <!-- Right side, choix mascottes-->
-        <div class="grille-sec">
+        <div class="grille-sec" onscroll="activite_detectee = true;">
 
-            <div class="grille">
+            <div class="grille" onscroll="activite_detectee = true;">
                 <?php foreach ($mascottes as $mascotte) { ?>
                     <div class="mascotte-gallery" id="<?= $mascotte['id'] ?>">
                         <img id="body" src="images/Formes/Gallery/<?= $mascotte['lien_corps'] ?>">
@@ -81,6 +82,7 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="js/gallery.js"></script>
+    <script src="js/innactif.js"></script>
 </body>
 
 </html>

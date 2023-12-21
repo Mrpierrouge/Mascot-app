@@ -50,11 +50,11 @@
         <img src="images/logo.png"  class="logo"/>
 
         <div class="mascotte-body">
-          <img id="body-mascotte" class="choice" src="" >
-          <img id="eyes-mascotte" class="choice" src="" >
+          <img id="body-mascotte" class="choice" src="images/Formes/Formes1.png" >
+          <img id="eyes-mascotte" class="choice" src="images/Emotions/Emotions1.png" >
           <img id="hat-mascotte" class="choice" src="" >
           <img id="accessories-mascotte" class="choice" src="" >
-          <img id="background-mascotte" class="choice" src="" >
+          <img id="background-mascotte" class="choice" src="images/Background/Background7.png" >
         </div>
       </div>
 
@@ -167,7 +167,7 @@
 
           <div class="hats hidden">
           <?php foreach ($AllHat as $hat): ?>
-              <div class="box" id="box-height">
+              <div class="box chapeau" id="box-height">
                 <label class="labelexpanded">
                     <img src="images/Hat/<?= $hat['lien'] ?>"  class="accessoire-js">
                     <input class="input-btn" type="radio" value="<?= $hat['lien'] ?>" name="hat">
@@ -178,7 +178,7 @@
 
           <div class="sports hidden">
             <?php foreach ($AllSport as $sport): ?>
-              <div class="box" id="box-height">
+              <div class="box accessoire" id="box-height">
                 <label class="labelexpanded">
                     <img src="images/Accessoires/<?= $sport['lien'] ?>"  class="sport-js">
                     <input class="input-btn" type="radio" value="<?= $sport['lien'] ?>" name="sport">
@@ -189,7 +189,7 @@
 
           <div class="pictures hidden">
           <?php foreach ($AllBackground as $background): ?>
-              <div class="box">
+              <div class="box bg">
                 <label class="labelexpanded">
                     <img src="images/Background/<?= $background['lien'] ?>"  class="background-js">
                     <input class="input-btn" type="radio" value="<?= $background['lien'] ?>" name="background">
