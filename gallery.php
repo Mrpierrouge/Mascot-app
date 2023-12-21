@@ -54,7 +54,6 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
 
                     <div class="popUpQrcode mascotte<?= $mascotte['id']  ?>">
                         <div class="contentQRcode">
-                            <p>Voici votre qrcode</p>
                             <a href="http://localhost/BAP_anim/Mascotte/qrcode.php?id=<?= $mascotte['id'] ?>">
                             <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/BAP_anim/Mascotte/qrcode.php?id=<?= $mascotte['id'] ?>/&size=150x150"
                                 alt="" title="" /></a>
