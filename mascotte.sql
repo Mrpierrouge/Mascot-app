@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 21, 2023 at 10:13 AM
+-- Generation Time: Dec 21, 2023 at 12:38 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -171,8 +171,7 @@ INSERT INTO `sport` (`id`, `lien`) VALUES
 (25, 'Accessoires11-Zoom.png'),
 (26, 'Accessoires12-Zoom.png'),
 (27, 'Accessoires13-Zoom.png'),
-(28, 'Accessoires14-Zoom.png'),
-(29, 'Ha.png');
+(28, 'Accessoires14-Zoom.png');
 
 -- --------------------------------------------------------
 
