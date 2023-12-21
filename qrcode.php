@@ -20,7 +20,6 @@ $id = $_GET['id'];
 </head>
 <body>
     <section class="container">
-        <!-- Left side, full mascotte-->
         <div class="mascotte-container">
             <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
             <button id="captureButton">Télécharger</button>
