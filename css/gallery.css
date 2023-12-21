@@ -134,16 +134,34 @@ button {
     align-items: center;
 }
 
+@media screen and (max-width: 1025px) {
+    .mascotte-body #body {
+        z-index: 1;
+        top: 60px;
+    }
+    .mascotte-body #eyes {
+        z-index: 2;
+        top: 60px;
+    }
+    .mascotte-body #hat {
+        z-index: 3;
+        top: 60px;
+    }
+    .mascotte-body #accessories {
+        top: 60px;
+        z-index: 4;
+    }
+}
+
 
 @media screen and (max-width: 1000px) {
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 550px;
     }
     #logo {
         display: none;
     }
-    
     .mascotte-container{
         width: 100%;
     }
