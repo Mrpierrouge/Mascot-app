@@ -10,15 +10,6 @@
     overflow: hidden;
 }
 
-a {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 100;
-    color: #667080;
-    text-decoration: none;
-    font-size: 30px;
-}
 
 button {
     z-index: 100;

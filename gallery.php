@@ -24,9 +24,9 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
 
         <!-- Left side, full mascotte-->
         <div class="mascotte-container">
-            <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
+            <button class="accueilQrBtn accueil"><a href="index.html" class="linkAccueil">ACCUEIL</a></button>
             <button id="captureButton">Télécharger</button>
-            <button id="btnQRcode" data-qr="<?=$mascottes[0]['id'] ?>">QRCODE</button>
+            <button id="btnQRcode" class="accueilQrBtn" data-qr="<?=$mascottes[0]['id'] ?>">QRCODE</button>
             <div class="mascotte" id="screenMascotte">
                 <div class="mascotte-body">
                     <img id="body" class="choice" src="images/Formes/Gallery/<?=$mascottes[0]['lien_corps'] ?>">
@@ -55,8 +55,9 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                     <div class="popUpQrcode mascotte<?= $mascotte['id']  ?>">
                         <div class="contentQRcode">
                             <p>Voici votre qrcode</p>
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/BAP_2023/Mascotte/qrcode.php?id=<?= $mascotte['id'] ?>/&size=150x150"
-                                alt="" title="" />
+                            <a href="http://localhost/BAP_anim/Mascotte/qrcode.php?id=<?= $mascotte['id'] ?>">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/BAP_anim/Mascotte/qrcode.php?id=<?= $mascotte['id'] ?>/&size=150x150"
+                                alt="" title="" /></a>
                             <button class="closeQrcode">Fermer</button>
                         </div>
                     </div>

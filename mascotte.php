@@ -66,7 +66,7 @@
               class="icon color"
             />
           </div>
-          <div class="round " id="eyes">
+          <div class="round eyeIcon" id="eyes">
             <img src="images/icons/expression.png"  class="icon eye opacity" />
           </div>
           <div class="round " id="hats">
