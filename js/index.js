@@ -1,9 +1,13 @@
+// Sélection du canvas HTML et définition de son contexte
+
 const canvas = document.querySelector("canvas");
 const c = canvas.getContext("2d");
 
+// Définition de la largeur et de la hauteur du canvas pour qu'il occupe toute la fenêtre
 canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
+// Fonction pour déterminer le nombre de particules en fonction de la taille du canvas
 function getParticlesNumber() {
   if (canvas.width < 1000 || canvas.height < 800) {
     return 6
@@ -13,29 +17,35 @@ function getParticlesNumber() {
   return 13;
 }
 
+// Fonction pour déterminer le rayon des particules en fonction de la taille du canvas
 function getParticlesRadius(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
+// Définition du nombre de particules
 let particleNumbers = getParticlesNumber();
 
+// Objet pour suivre la position de la souris
 const mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
 };
 
+// Tableau de couleurs pour les particules
 const colors = ["#FCB030", "#090909", "#009D4B", "#E72845", "#15BEFF"];
 
+// Fonction pour générer un nombre aléatoire dans une plage donnée
 function randomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// Fonction pour choisir une couleur aléatoire
 function randomColor(colors) {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
+// Fonction pour calculer la distance entre deux points
 function distance(x1, y1, x2, y2) {
   const xDist = x2 - x1;
   const yDist = y2 - y1;
@@ -43,7 +53,7 @@ function distance(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
 }
 
-// Event Listeners
+// Écouteurs d'événements pour suivre les mouvements de la souris et redimensionner le canvas
 addEventListener("mousemove", (event) => {
   mouse.x = event.clientX;
   mouse.y = event.clientY;
@@ -85,6 +95,8 @@ function rotate(velocity, angle) {
  * @return Null | Does not return a value
  */
 
+
+// Fonction pour gérer les collisions entre particules
 function resolveCollision(particle, otherParticle) {
   const xVelocityDiff = particle.velocity.x - otherParticle.velocity.x;
   const yVelocityDiff = particle.velocity.y - otherParticle.velocity.y;
@@ -131,7 +143,7 @@ function resolveCollision(particle, otherParticle) {
   }
 }
 
-// Objects
+// Classe pour créer des particules avec des propriétés et des méthodes spécifiques
 class Particle {
   constructor(x, y, radius, color) {
     this.x = x;
@@ -203,7 +215,7 @@ class Particle {
 
 
 
-// Implementation
+// Initialisation des particules
 let particles = [];
 function init() {
   particles = [];
@@ -239,7 +251,7 @@ function init() {
   }
 }
 
-// Animation Loop
+// Boucle d'animation
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, canvas.width, canvas.height);

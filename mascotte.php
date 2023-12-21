@@ -201,9 +201,9 @@
           </div>
 
           <div class="shares hidden">
-            <h2>Merci d'avoir participer !*</h2>
+            <h2>Merci d'avoir participé !*</h2>
             <p>*J’accepte que ma mascotte soit publié sur le site du musée</p>
-            <button type="submit" name="submit" class="submit-btn" value="Confirm">Voir la gallerie</button>
+            <button type="submit" name="submit" class="submit-btn" value="Confirm">Voir la galerie</button>
           </div>   
         </form>
         </div>
