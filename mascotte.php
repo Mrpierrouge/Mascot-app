@@ -52,10 +52,10 @@
         </a>
 
         <div class="mascotte-body">
-          <img id="body-mascotte" class="choice" src="images/Formes/Formes1.png" >
-          <img id="eyes-mascotte" class="choice" src="images/Emotions/Emotions1.png" >
-          <img id="hat-mascotte" class="choice" src="" >
-          <img id="accessories-mascotte" class="choice" src="" >
+          <img id="body-mascotte" class="choice descend" src="images/Formes/Formes1.png" >
+          <img id="eyes-mascotte" class="choice descend" src="images/Emotions/Emotions1.png" >
+          <img id="hat-mascotte" class="choice descend" src="" >
+          <img id="accessories-mascotte" class="choice descend" src="" >
           <img id="background-mascotte" class="choice" src="images/Background/Background7.png" >
         </div>
       </div>
@@ -202,7 +202,7 @@
 
           <div class="shares hidden">
             <h2>Merci d'avoir participé !*</h2>
-            <p>*J’accepte que ma mascotte soit publié sur le site du musée</p>
+            <p>*J’accepte que ma mascotte soit publiée sur le site du musée</p>
             <button type="submit" name="submit" class="submit-btn" value="Confirm">Voir la galerie</button>
           </div>   
         </form>

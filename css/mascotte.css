@@ -386,9 +386,9 @@ label input {
   justify-content: center;
   width: 100%;
 }
+
 #body-mascotte{
   z-index: 1;
-
 }
 #eyes-mascotte{
   z-index: 2;
