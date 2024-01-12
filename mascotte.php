@@ -1,6 +1,8 @@
 <?php
     require_once "connec.php";
 
+    //requête pour obtenir tous les liens des assets des mascottes envoyés dans la bdd
+    //Corps couleurs différentes
     $requete = $database->prepare("SELECT * FROM `corps` WHERE color='red';");
     $requete->execute();
     $AllCorpsRed = $requete->fetchAll(PDO::FETCH_ASSOC);
@@ -17,18 +19,22 @@
     $requete->execute();
     $AllCorpsYellow = $requete->fetchAll(PDO::FETCH_ASSOC);
 
+    //Visage
     $requete = $database->prepare("SELECT * FROM visage ");
     $requete->execute();
     $AllVisage = $requete->fetchAll(PDO::FETCH_ASSOC);
 
+    //Accessoires / Sport
     $requete = $database->prepare("SELECT * FROM sport ");
     $requete->execute();
     $AllSport = $requete->fetchAll(PDO::FETCH_ASSOC);
 
+    //Chapeaux
     $requete = $database->prepare("SELECT * FROM hat ");
     $requete->execute();
     $AllHat = $requete->fetchAll(PDO::FETCH_ASSOC);
 
+    //Background
     $requete = $database->prepare("SELECT * FROM background ");
     $requete->execute();
     $AllBackground = $requete->fetchAll(PDO::FETCH_ASSOC);
@@ -44,6 +50,7 @@
     <link rel="stylesheet" href="css/mascotte.css" />
   </head>
   <body>
+    <!-- formulaire pour envoyer les liens des assets de la mascotte en get pour pouvoir récupérer l'id dans le lien -->
     <form action="insert-mascotte.php" method="get">
     <div class="content">
       <div class="left">
@@ -51,6 +58,7 @@
           <img src="images/logo.png"  class="logo"/>
         </a>
 
+        <!-- mascotte -->
         <div class="mascotte-body">
           <img id="body-mascotte" class="choice descend" src="images/Formes/Formes1.png" >
           <img id="eyes-mascotte" class="choice descend" src="images/Emotions/Emotions1.png" >
@@ -60,6 +68,7 @@
         </div>
       </div>
 
+      <!-- Les icons pour choisir les assets de la mascotte -->
       <div class="right">
         <div class="icons">
           <div class="round " id="colors" style="background-color:#EC7373">
@@ -94,7 +103,7 @@
           </div>
         </div>
 
-        
+        <!-- choisir les assets pour mobile -->
         <div class="choices">
           <div class="mobileIcon mobileIconBlue">
             <p id="mobileForme" class="opacity mobile">Forme</p>
@@ -105,6 +114,7 @@
             <p id="mobilePartager" class="opacity mobile">Partager</p>
           </div>
 
+          <!-- choix couleurs body -->
           <div class="colors">
             <div class="divRounds">
               <div class="roundColors rouge" id="red"></div>
@@ -114,10 +124,12 @@
               <div class="roundColors noir" id="black"></div>
             </div>
       
+            <!-- choix des assets -->
             <?php foreach ($AllCorpsRed as $corps): ?>
             <div class="box" id="box-red">
               <label class="labelexpanded">
                   <div><img src="images/Formes/<?= $corps['lien'] ?>"  class="forme-js"></div>
+                  <!-- input radio pour pouvoir récupérer le lien du corps choisi et qu'il puisse choisir qu'un seul asset par catégorie -->
                   <input class="input-btn" type="radio" value="<?= $corps['lien'] ?>" name="corps">
               </label>
             </div>
@@ -200,6 +212,7 @@
           <?php endforeach ?>
           </div>
 
+          <!-- Aller à la page galerie -->
           <div class="shares hidden">
             <h2>Merci d'avoir participé !*</h2>
             <p>*J’accepte que ma mascotte soit publiée sur le site du musée</p>

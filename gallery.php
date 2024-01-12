@@ -2,7 +2,7 @@
 
 require("connec.php");
 
-
+//requête pour obtenir tous les liens des mascottes envoyés dans la bdd
 $requete = $database->prepare("SELECT * FROM mascottes ORDER BY id DESC");
 $requete->execute();
 $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
@@ -38,10 +38,11 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
 
-        <!-- Right side, choix mascottes-->
+        <!-- Right side, choix de toutes les mascottes qui ont été créées -->
         <div class="grille-sec" onscroll="activite_detectee = true;">
 
             <div class="grille" onscroll="activite_detectee = true;">
+            <!-- on met les liens des assets des mascottes pour les afficher -->
                 <?php foreach ($mascottes as $mascotte) { ?>
                     <div class="mascotte-gallery" id="<?= $mascotte['id'] ?>">
                         <img id="body" src="images/Formes/Gallery/<?= $mascotte['lien_corps'] ?>">
@@ -51,7 +52,7 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                         <img id="accessories" src="images/Accessoires/Gallery/<?= $mascotte['lien_sport'] ?>">
                     </div>
 
-
+                    <!-- Pop up QRcode -->
                     <div class="popUpQrcode mascotte<?= $mascotte['id']  ?>">
                         <div class="contentQRcode">
                             <a href="http://phpmyadmin.test/php/mascotte/qrcode.php?id=<?= $mascotte['id'] ?>">
@@ -62,12 +63,14 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
                     </div>
 
                     <script>
+                        // On récupère l'id de la mascotte pour afficher le bon QRcode
                         document.getElementById('btnQRcode').addEventListener('click', function() {
                             const id = this.getAttribute('data-qr');
                             const popUp = document.querySelector('.mascotte' + id);
                             popUp.style.display = 'flex';
                         });
 
+                        // On ferme le QRcode
                         document.querySelector('.closeQrcode').addEventListener('click', () => {
                             document.querySelector('.popUpQrcode').style.display = 'none';
                             document.querySelector('.mascotte<?=$mascotte['id'] ?>').style.display = 'none';
