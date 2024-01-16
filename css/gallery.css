@@ -17,6 +17,19 @@ a {
     text-decoration: none;
     color: white;
 }
+.descend{
+    padding-top: 30%;
+    scale: 1.2;
+  }
+
+@media screen and (max-width: 1000px) {
+    .descend{
+        padding-top: 0;
+        scale: 1;
+    }
+    
+}
+  
 .closeQrcode {
     background-color: black;
     color: white;

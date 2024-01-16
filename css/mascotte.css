@@ -100,6 +100,10 @@ label input {
   overflow-x: auto;
 }
 
+.descend{
+  padding-top: 32%;
+}
+
 .colors {
   /* border-left : 2vw solid #d88894; */
   background-color: #EC7373;

@@ -29,10 +29,10 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
             <button id="btnQRcode" class="accueilQrBtn" data-qr="<?=$mascottes[0]['id'] ?>">QRCODE</button>
             <div class="mascotte" id="screenMascotte">
                 <div class="mascotte-body">
-                    <img id="body" class="choice" src="images/Formes/Gallery/<?=$mascottes[0]['lien_corps'] ?>">
-                    <img id="eyes" class="choice" src="images/Emotions/Gallery/<?= $mascottes[0]['lien_visage'] ?>">
-                    <img id="hat" class="choice" src="images/Hat/Gallery/<?= $mascottes[0]['lien_accessoire'] ?>">
-                    <img id="accessories" class="choice" src="images/Accessoires/Gallery/<?= $mascottes[0]['lien_sport'] ?>">
+                    <img id="body" class="choice descend" src="images/Formes/Gallery/<?=$mascottes[0]['lien_corps'] ?>">
+                    <img id="eyes" class="choice descend" src="images/Emotions/Gallery/<?= $mascottes[0]['lien_visage'] ?>">
+                    <img id="hat" class="choice descend" src="images/Hat/Gallery/<?= $mascottes[0]['lien_accessoire'] ?>">
+                    <img id="accessories" class="choice descend" src="images/Accessoires/Gallery/<?= $mascottes[0]['lien_sport'] ?>">
                 </div>
                 <img id="background" class="choice" src="images/Background/<?= $mascottes[0]['lien_background'] ?>">
             </div>
@@ -45,11 +45,11 @@ $mascottes = $requete->fetchAll(PDO::FETCH_ASSOC);
             <!-- on met les liens des assets des mascottes pour les afficher -->
                 <?php foreach ($mascottes as $mascotte) { ?>
                     <div class="mascotte-gallery" id="<?= $mascotte['id'] ?>">
-                        <img id="body" src="images/Formes/Gallery/<?= $mascotte['lien_corps'] ?>">
-                        <img id="eyes" src="images/Emotions/Gallery/<?= $mascotte['lien_visage'] ?>">
-                        <img id="hat" src="images/Hat/Gallery/<?= $mascotte['lien_accessoire'] ?>">
+                        <img class="descend" id="body" src="images/Formes/Gallery/<?= $mascotte['lien_corps'] ?>">
+                        <img class="descend"id="eyes" src="images/Emotions/Gallery/<?= $mascotte['lien_visage'] ?>">
+                        <img class="descend"id="hat" src="images/Hat/Gallery/<?= $mascotte['lien_accessoire'] ?>">
                         <img id="background" src="images/Background/<?= $mascotte['lien_background'] ?>">
-                        <img id="accessories" src="images/Accessoires/Gallery/<?= $mascotte['lien_sport'] ?>">
+                        <img class="descend"id="accessories" src="images/Accessoires/Gallery/<?= $mascotte['lien_sport'] ?>">
                     </div>
 
                     <!-- Pop up QRcode -->
