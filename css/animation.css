@@ -1,0 +1,58 @@
+/* round */
+
+.round{
+    background-color: #EEF1F4;
+    width: 70%;
+    max-width: 100px;
+    min-width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.pulse {
+  animation: pulse-animation 1.2s ;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
+
+
+/* .animateIcon{
+    transform: translateX(60%) scale(100%);
+    transition-duration: 750ms;
+    background-size: 100% 100%;
+}
+
+
+@media  screen and (min-width: 1400px) {
+    .animateIcon{
+        transform: translateX(100%) scale(100%);
+        transition-duration: 750ms;
+      }
+}
+@media  screen and (min-width: 1760px) {
+  .animateIcon{
+      transform: translateX(130%) scale(100%);
+      transition-duration: 750ms;
+    }
+}
+
+@keyframes test {
+    from {
+      margin-left: 0%;
+    }
+    to {
+      margin-left: 20%;
+    }
+  } */
